@@ -4,3 +4,6 @@
 [submodule "src/arm-trusted-firmware"]
 	path = src/arm-trusted-firmware
 	url = https://github.com/xX7/arm-trusted-firmware.git
+[submodule "src/bao-hypervisor"]
+	path = src/bao-hypervisor
+	url = https://github.com/xX7/bao-hypervisor.git
