@@ -1,3 +1,6 @@
 [submodule "src/u-boot"]
 	path = src/u-boot
 	url = https://github.com/u-boot/u-boot.git
+[submodule "src/arm-trusted-firmware"]
+	path = src/arm-trusted-firmware
+	url = https://github.com/xX7/arm-trusted-firmware.git
