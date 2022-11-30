@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "platform.h": "c",
+        "*.x": "c",
+        "*.def": "c",
+        "*.cfg": "c",
+        "limits": "c",
+        "vm.h": "c",
+        "type_traits": "c",
+        "cstdlib": "c"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/imgs" : true,
+        "**/srcs/arm-trusted-firmware" : true,
+        "**/srcs/buildroot-*" : true,
+        "**/srcs/linux-*" : true,
+        "**/srcs/u-boot" : true,
+    }
+    //"C_Cpp.loggingLevel": "Debug"
+}
