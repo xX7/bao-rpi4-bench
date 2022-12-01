@@ -42,6 +42,10 @@
 *.idb
 *.pdb
 
+# Output Folders
+sdcard/*
+firmware-rpi/*
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
