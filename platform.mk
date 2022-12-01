@@ -5,7 +5,7 @@ firmware_images:=$(curPath)/firmware-rpi
 
 atf_src:=$(srcPath)/arm-trusted-firmware
 atf_dest_image:=$(imgPath)/bl31.bin
-atf_plat:=PLATFORM
+atf_plat:=$(PLATFORM)
 
 uboot_src:=$(srcPath)/u-boot
 uboot_defconfig:=rpi_4_defconfig
@@ -24,14 +24,9 @@ u-boot $(uboot_dest_image): $(uboot_src)
 $(firmware_images):
 	git clone --depth 1 --branch $(firmware_version) $(firmware_repo) $(firmware_images)
 
-sdcardDir:
-	@mkdir -p $(imgPath)
-
 #instuctions:=$(bao_demos)/platforms/$(PLATFORM)/README.md
 
-platform: sdcardDir $(uboot_dest_image) $(atf_dest_image) $(firmware_images)
+platform: $(uboot_dest_image) $(atf_dest_image) $(firmware_images)
 #	$(call print-instructions, $(instuctions), 1, false)
 #	$(call print-instructions, $(instuctions), 2, false)
 #	$(call print-instructions, $(instuctions), 3, true)
-
-.PHONY: sdcardDir

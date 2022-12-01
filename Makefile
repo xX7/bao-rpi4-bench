@@ -7,10 +7,13 @@ curPath:=$(abspath .)
 srcPath:=$(curPath)/src
 imgPath:=$(curPath)/sdcard
 
-all: platform freertos
+all: dir platform freertos
+
+dir:
+	@mkdir -p $(imgPath)
 
 include platform.mk
 include freertos.mk
 include linux.mk
 
-.PHONY: all 
+.PHONY: dir all
