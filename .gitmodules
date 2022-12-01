@@ -7,3 +7,7 @@
 [submodule "src/bao-hypervisor"]
 	path = src/bao-hypervisor
 	url = https://github.com/xX7/bao-hypervisor.git
+[submodule "src/freertos"]
+	path = src/freertos
+	url = https://github.com/xX7/freertos-bao-hartstone.git
+	branch = hartstone
