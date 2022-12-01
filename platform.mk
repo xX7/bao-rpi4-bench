@@ -1,17 +1,11 @@
 
-ARCH:=aarch64
-
-curPath:=$(abspath .)
-srcPath:=$(curPath)/src
-imgPath:=$(curPath)/sdcard
-
 firmware_repo:=https://github.com/raspberrypi/firmware.git
 firmware_version:=1.20210201
 firmware_images:=$(curPath)/firmware-rpi
 
 atf_src:=$(srcPath)/arm-trusted-firmware
 atf_dest_image:=$(imgPath)/bl31.bin
-atf_plat:=rpi4
+atf_plat:=PLATFORM
 
 uboot_src:=$(srcPath)/u-boot
 uboot_defconfig:=rpi_4_defconfig
