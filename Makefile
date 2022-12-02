@@ -6,8 +6,9 @@ PLATFORM:=rpi4
 curPath:=$(abspath .)
 srcPath:=$(curPath)/src
 imgPath:=$(curPath)/sdcard
+confPath:=$(curPath)/configs
 
-all: dir platform freertos
+all: dir platform freertos linux
 
 dir:
 	@mkdir -p $(imgPath)
