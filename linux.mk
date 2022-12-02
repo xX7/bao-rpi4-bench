@@ -29,7 +29,6 @@ $(buildroot_src):
 	git clone --depth 1 --branch $(buildroot_version) $(buildroot_repo)\
 		$(buildroot_src)
 
-
 $(buildroot_image): $(linux_patches) $(linux_cfg_frag) $(buildroot_defcfg) | $(linux_src) $(buildroot_src) 
 	$(MAKE) -C $(buildroot_src) defconfig BR2_DEFCONFIG=$(buildroot_defcfg)
 	$(MAKE) -C $(buildroot_src) linux-reconfigure all

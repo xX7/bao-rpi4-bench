@@ -1,7 +1,7 @@
 #include <config.h>
 
-VM_IMAGE(linux_image, XSTR(BAO_DEMOS_WRKDIR_IMGS/linux.bin));
-VM_IMAGE(freertos_image, XSTR(BAO_DEMOS_WRKDIR_IMGS/freertos.bin));
+VM_IMAGE(linux_image, XSTR(IMG_PATH/linux.bin));
+VM_IMAGE(freertos_image, XSTR(IMG_PATH/freertos.bin));
 
 struct config config = {
     
