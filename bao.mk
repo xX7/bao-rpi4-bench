@@ -8,10 +8,10 @@ bao_image:=$(imgPath)/bao.bin
 $(bao_cfg_repo):
 	@mkdir -p $(bao_cfg_repo)
 
-$(bao_cfg): | $(bao_cfg_repo)
+$(bao_cfg_dest): | $(bao_cfg_repo)
 	cp -L $(bao_cfg) $(bao_cfg_dest)
 
-$(bao_image): $(bao_cfg) $(bao_src) 
+$(bao_image): $(bao_cfg_dest) $(bao_src) 
 	$(MAKE) -C $(bao_src)\
 		PLATFORM=$(PLATFORM)\
 		CONFIG_REPO=$(bao_cfg_repo)\

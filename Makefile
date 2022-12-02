@@ -8,7 +8,7 @@ srcPath:=$(curPath)/src
 imgPath:=$(curPath)/sdcard
 confPath:=$(curPath)/configs
 
-all: dir platform freertos linux
+all: dir platform freertos linux bao
 
 dir:
 	@mkdir -p $(imgPath)
@@ -16,5 +16,6 @@ dir:
 include platform.mk
 include freertos.mk
 include linux.mk
+include bao.mk
 
 .PHONY: dir all
