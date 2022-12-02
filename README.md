@@ -1,9 +1,13 @@
 # bao-rpi4-bench
-Project using Bao hypervisor with FreeRTOS+Linux running haRTStone benchmark.
 
-Originally based on [Bao Project's][bao] demo project but specialized for Raspberry Pi 4
-running FreeRTOS and Linux. FreeRTOS executes the haRTSone benchmark to determine the performance and real time capabilities of
+Project using Bao Hypervisor running FreeRTOS and Linux.
+It is originally based on [Bao Project's][bao] demo project but restructured/forked and
+exclusively for the Raspberry Pi 4.
+
+FreeRTOS executes the haRTStone benchmark ported by [Daniel Casini, Emiliano Palermiti and Matteo Pampana][hartstone] to determine the performance and real time capabilities of
 FreeRTOS running under a vm environment.
+
+The haRTStone benchmark has been adjusted to properly work with the Raspberry Pi 4 and bao's version of FreeRTOS.
 
 ## Install Dependencies
 
@@ -33,3 +37,4 @@ git clone --recurse-submodules https://github.com/xX7/bao-rpi4-bench.git
 
 [arm-toolchains]: https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads
 [bao]: https://github.com/bao-project
+[hartstone]: https://github.com/CDanielC/HartstoneRTBenchmark
