@@ -11,3 +11,6 @@
 	path = src/freertos
 	url = https://github.com/xX7/freertos-bao-hartstone.git
 	branch = hartstone
+[submodule "src/freertos-neneco-hartstone"]
+	path = src/freertos-neneco-hartstone
+	url = https://github.com/xX7/freertos-neneco-hartstone.git
