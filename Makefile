@@ -18,4 +18,4 @@ include freertos.mk
 include linux.mk
 include bao.mk
 
-.PHONY: dir all
+.PHONY: dir all freertos

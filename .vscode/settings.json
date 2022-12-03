@@ -17,10 +17,16 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         "**/imgs" : true,
-        "**/srcs/arm-trusted-firmware" : true,
-        "**/srcs/buildroot-*" : true,
-        "**/srcs/linux-*" : true,
-        "**/srcs/u-boot" : true,
+        "**/src/arm-trusted-firmware" : true,
+        "**/src/buildroot-*" : true,
+        "**/src/linux-*" : true,
+        "**/src/u-boot" : true,
+    },
+    "files.watcherExclude": {
+        "**/src/arm-trusted-firmware/**": true,
+        "**/src/buildroot-*/**": true,
+        "**/src/linux-*/**": true,
+        "**/src/u-boot/**": true
     }
     //"C_Cpp.loggingLevel": "Debug"
 }
