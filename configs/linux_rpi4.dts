@@ -117,7 +117,7 @@
 	};
 
 	chosen {
-		bootargs = "earlycon clk_ignore_unused ip=192.168.178.15 carrier_timeout=0";
+		bootargs = "earlycon clk_ignore_unused ip=192.168.178.11 carrier_timeout=0";
 	};
 
 };
