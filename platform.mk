@@ -18,6 +18,7 @@ atf $(atf_dest_image): $(atf_src)
 
 u-boot $(uboot_dest_image): $(uboot_src)
 	$(MAKE) -C $(uboot_src) $(uboot_defconfig)
+	echo 'CONFIG_CMD_CACHE=y' >> $(uboot_src)/.config
 	$(MAKE) -C $(uboot_src) -j$(nproc) 
 	cp $(uboot_src)/u-boot.bin $(uboot_dest_image)
 
