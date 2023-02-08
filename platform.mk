@@ -2,6 +2,7 @@
 firmware_repo:=https://github.com/raspberrypi/firmware.git
 firmware_version:=1.20210201
 firmware_images:=$(curPath)/firmware-rpi
+firmware_config:=$(imgPath)/config.txt
 
 atf_src:=$(srcPath)/arm-trusted-firmware
 atf_dest_image:=$(imgPath)/bl31.bin
@@ -25,9 +26,12 @@ u-boot $(uboot_dest_image): $(uboot_src)
 $(firmware_images):
 	git clone --depth 1 --branch $(firmware_version) $(firmware_repo) $(firmware_images)
 
+$(firmware_config):
+	cp $(confPath)/firmware_config_rpi4.txt $(firmware_config)
+
 #instuctions:=$(bao_demos)/platforms/$(PLATFORM)/README.md
 
-platform: $(uboot_dest_image) $(atf_dest_image) $(firmware_images)
+platform: $(uboot_dest_image) $(atf_dest_image) $(firmware_images) $(firmware_config)
 #	$(call print-instructions, $(instuctions), 1, false)
 #	$(call print-instructions, $(instuctions), 2, false)
 #	$(call print-instructions, $(instuctions), 3, true)
